@@ -1,7 +1,11 @@
-import { Button } from "@/components/Button";
+'use client';
+
+import Switch from "@/components/Switch/Switch";
+
+
 
 export default function Home() {
-  return (
-  <Button title={'Botão'}>Botão</Button>
+  return (<div className="m-2">     <Switch /></div>
+ 
   )
 }

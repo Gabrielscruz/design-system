@@ -1,3 +1,97 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('../fonts/Mulish-Regular.woff2') format('woff2'),
+    url('../fonts/Mulish-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Mulish', sans-serif;
+}
+
+@layer base {
+
+    :root {
+        /* Colors */
+        --primary: 45, 91, 255;
+        --secondary: 98, 132, 253;
+        --tertiary: 150, 173, 255;
+        --quaternary: 236, 240, 255;
+      
+        --hover: 27, 74, 240;
+        --click: 0, 46, 208;
+        --icon: 124, 123, 123;
+        --outline: 215, 215, 215;
+        --divider: 237, 237, 237;
+      
+        --bg-light: 255, 255, 255;
+        --bg-dark: 248, 248, 248;
+        --bg-disabled: 239, 239, 239;
+      
+        --text-primary: 24, 24, 24;
+        --text-secondary: 92, 92, 92;
+        --text-tertiary: 116, 116, 116;
+        --text-disabled: 138, 138, 138;
+
+        /* Screens */
+        --screen-mobile: 640px;
+        --screen-tablet: 1024px;
+        --screen-desktop: 1440px;
+        --screen-tv: 1920px;
+
+        /* Shadows */
+        --shadow-sm: 0px 0px 10px rgba(132, 132, 132, 15%);
+        --shadow-md: 0px 0px 20px rgba(132, 132, 132, 20%);
+        --shadow-lg: 0px 0px 30px rgba(132, 132, 132, 25%);
+        --shadow-focus: 0px 0px 0px 2px #643296;
+        --shadow-outline: 0px 0px 0px 2px #E8E8E8;
+        --shadow-button-focus: 0px 0px 0px 2px #AF4BFE;
+
+        /* Blur */
+        --blur: 4px;
+
+        /* Spacing */
+        --spacing-none: 0px;
+        --spacing-4xs: 0.5rem;
+        --spacing-2xs: 0.75rem;
+        --spacing-xs: 1rem;
+        --spacing-sm: 1.25rem;
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 2.5rem;
+        --spacing-2xl: 3rem;
+        --spacing-4xl: 3.5rem;
+        
+        /* Border Radius */
+        --border-radius-none: 0rem;
+        --border-radius-sm: 0.25rem;
+        --border-radius-md: 0.5rem;
+        --border-radius-lg: 1rem;
+        
+
+        /* Font Size */
+        --text-xs: 0.75rem;
+        --text-sm: 0.875rem;
+        --text-md: 1rem;
+        --text-lg: 1.12rem;
+        --text-xl: 1.25rem;
+
+            /* Title Font Size */
+        --title-md: 40px;
+        --title-lg: 48px;
+        --title-xl: 56px;
+      }
+    
+      .theme-violet {
+        --primary: 175, 75, 254;
+        --secondary: 190, 116, 249;
+        --tertiary: 226, 189, 255;
+        --quaternary: 245, 232, 255;
+      }
+}
