@@ -55,6 +55,20 @@ export const ContractNotEnabled: Story = {
   },
 };
 
+export const ModeEnabled: Story = {
+  args: {
+    variant: "mode",
+    defaultEnable: true,
+  },
+};
+
+export const ModeNotEnabled: Story = {
+  args: {
+    variant: "mode",
+    defaultEnable: false,
+  },
+};
+
 export const CommonEnabledDisabled: Story = {
   args: {
     defaultEnable: true,

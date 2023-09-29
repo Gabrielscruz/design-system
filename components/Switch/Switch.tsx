@@ -4,12 +4,12 @@ import {
     type SwitchProps as HeadlessSwitchProps,
   } from "@headlessui/react";
   import { useState } from "react";
-  import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
+  import { CheckIcon, XMarkIcon, MoonIcon, SunIcon  } from "@heroicons/react/24/solid";
   import useStyle from "./Switch.style";
   
   export type SwitchProps = {
     defaultEnable?: boolean;
-    variant?: "common" | "contract";
+    variant?: "common" | "contract" | "mode";
     disabled?: boolean;
     onChange?: (enabled: boolean) => void;
   } & HeadlessSwitchProps<any>;
@@ -47,6 +47,16 @@ import {
             )}
             {enabled || (
               <XMarkIcon className={style.Icon} aria-disabled={disabled} />
+            )}
+          </span>
+        )}
+        {variant === "mode" && (
+          <span className={style.Switch}>
+            {enabled && (
+              <MoonIcon className={style.Icon} aria-disabled={disabled} />
+            )}
+            {enabled || (
+              <SunIcon className={style.Icon} aria-disabled={disabled} />
             )}
           </span>
         )}

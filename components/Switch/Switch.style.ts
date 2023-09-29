@@ -20,6 +20,10 @@ export default ({ variant, enabled, disabled }: SwitchProps) => {
             { "bg-success": enabled },
             { "bg-error": !enabled }
           ),
+          mode: classNames(
+            { "bg-gray-900": enabled },
+            { "bg-divider": !enabled }
+          ),
         },
       },
       defaultVariants: {
@@ -30,7 +34,8 @@ export default ({ variant, enabled, disabled }: SwitchProps) => {
   const containerClasses = containerVariant({ variant });
 
   const switchClasses = classNames(
-    "inline-block bg-white h-[24px] w-[24px] rounded-full transform transition-transform duration-200 ease-in-out .gap-2",
+    "inline-block  h-[24px] w-[24px] rounded-full transform transition-transform duration-200 ease-in-out .gap-2",
+    variant === 'mode' ?  enabled ? 'bg-black' : 'bg-white' : 'bg-white',
     enabled ? "translate-x-[1.8rem]" : "translate-x-0.5"
   );
 
@@ -38,6 +43,12 @@ export default ({ variant, enabled, disabled }: SwitchProps) => {
     "aria-disabled: text-font-disabled",
     { "text-success": enabled && !disabled },
     { "text-error": !enabled && !disabled },
+
+    { "text-success": enabled && !disabled && variant === 'contract'},
+    { "text-error": !enabled && !disabled && variant === 'contract' },
+    { "text-yellow-300": enabled && !disabled && variant === 'mode'},
+    { "text-yellow-300": !enabled && !disabled && variant === 'mode' },
+
     { "text-disabled": disabled }
   );
 

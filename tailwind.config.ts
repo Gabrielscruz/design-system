@@ -60,11 +60,14 @@ const config: Config = {
         icon: 'rgba(var(--icon), <alpha-value>)',
         outline: 'rgba(var(--outline), <alpha-value>)',
         divider: 'rgba(var(--divider), <alpha-value>)',
+        success: 'rgba(var(--bg-success), <alpha-value>)',
+        error: 'rgba(var(--bg-error), <alpha-value>)',
       },
       backgroundColor: {
         light: 'rgba(var(--bg-light), <alpha-value>)',
         dark: 'rgba(var(--bg-dark), <alpha-value>)',
         disabled: 'rgba(var(--bg-disabled), <alpha-value>)',
+
       },
       textColor: {
         gray: {
